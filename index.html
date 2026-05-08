@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noble Olive Wood — حرفة خشبية راقية</title>
+  <meta name="description" content="منتجات خشب الزيتون الفاخرة مصنوعة يدوياً — Handcrafted Noble Olive Wood Products"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== LANGUAGE SWITCHER ===== -->
+<div id="lang-bar">
+  <div class="lang-inner">
+    <span class="lang-label" data-i18n="lang_label">اللغة:</span>
+    <div class="lang-buttons">
+      <button class="lang-btn active" data-lang="ar">العربية</button>
+      <button class="lang-btn" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="fr">Français</button>
+      <button class="lang-btn" data-lang="de">Deutsch</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      <img src="logo.png" alt="Noble Olivewood" class="logo-img"/>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="#home" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+      <a href="#products" class="nav-link" data-i18n="nav_products">المنتجات</a>
+      <a href="#about" class="nav-link" data-i18n="nav_about">عنّا</a>
+      <a href="#testimonials" class="nav-link" data-i18n="nav_reviews">آراء العملاء</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">تواصل</a>
+      <a href="#order" class="nav-link cta-nav" data-i18n="nav_order">اطلب الآن</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <div class="wood-grain"></div>
+    <div class="hero-orbs">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge" data-i18n="hero_badge">✦ صنع يدوي بعناية فائقة</div>
+    <h1 class="hero-title">
+      <span class="line1" data-i18n="hero_title1">فن الخشب</span>
+      <span class="line2" data-i18n="hero_title2">يولد من جديد</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero_sub">
+      منتجات خشبية فاخرة تجمع بين الطبيعة والحداثة — كل قطعة قصة
+    </p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary" data-i18n="hero_cta1">اكتشف المجموعة</a>
+      <a href="#order" class="btn-ghost" data-i18n="hero_cta2">اطلب قطعة مخصصة</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">+200</span><span class="stat-label" data-i18n="stat1">قطعة مُسلَّمة</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">18</span><span class="stat-label" data-i18n="stat2">دولة حول العالم</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label" data-i18n="stat3">عمل يدوي</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span data-i18n="scroll_hint">مرر للاكتشاف</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== VALUE PROPS ===== -->
+<section class="values">
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-icon">🌿</div>
+      <h3 data-i18n="val1_title">خشب طبيعي 100%</h3>
+      <p data-i18n="val1_desc">نختار أجود أنواع الأخشاب المستدامة من مصادر موثوقة</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">✦</div>
+      <h3 data-i18n="val2_title">تخصيص كامل</h3>
+      <p data-i18n="val2_desc">اختر الشكل والحجم والنقش — كل قطعة تُصنع لك وحدك</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">🚚</div>
+      <h3 data-i18n="val3_title">شحن عالمي</h3>
+      <p data-i18n="val3_desc">نوصل إلى أكثر من 18 دولة بتغليف آمن ومحترف</p>
+    </div>
+    <div class="value-card">
+      <div class="value-icon">💎</div>
+      <h3 data-i18n="val4_title">ضمان الجودة</h3>
+      <p data-i18n="val4_desc">كل قطعة تمر بمراجعة دقيقة قبل الشحن</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section id="products" class="products-section">
+  <div class="section-header">
+    <span class="section-tag" data-i18n="products_tag">المجموعة الكاملة</span>
+    <h2 data-i18n="products_title">اكتشف منتجاتنا</h2>
+    <p data-i18n="products_sub">قطع فريدة تجمع بين الجمال والوظيفة</p>
+  </div>
+
+  <!-- Filter & Search -->
+  <div class="products-controls">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="search-input" class="search-input" data-placeholder-i18n="search_placeholder" placeholder="ابحث عن منتج..."/>
+    </div>
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">الكل</button>
+      <button class="filter-btn" data-filter="resin" data-i18n="filter_resin">مع ريزين</button>
+      <button class="filter-btn" data-filter="natural" data-i18n="filter_natural">بدون ريزين</button>
+      <button class="filter-btn" data-filter="kitchen" data-i18n="filter_kitchen">مطبخ</button>
+      <button class="filter-btn" data-filter="decor" data-i18n="filter_decor">ديكور</button>
+      <button class="filter-btn" data-filter="gift" data-i18n="filter_gift">هدايا</button>
+    </div>
+  </div>
+
+  <!-- Category: Resin -->
+  <div class="category-label">
+    <h3 data-i18n="cat_resin">🌊 خشب مع ريزين</h3>
+    <p data-i18n="cat_resin_sub">قطع فنية تجمع الخشب الطبيعي مع الريزين الشفاف بألوان مذهلة</p>
+  </div>
+  <div class="products-grid" id="products-grid">
+
+    <div class="product-card" data-category="resin decor gift" data-name-ar="لوحة ريزين أوقيانوسية" data-name-en="Ocean Resin Board" data-name-fr="Plateau Résine Océan" data-name-de="Ozean-Harz-Brett">
+      <div class="product-img resin-gradient-1">
+        <div class="product-emoji">🌊</div>
+        <div class="product-badge new" data-i18n="badge_new">جديد</div>
+        <button class="quick-order" data-product="ocean-resin" data-i18n="quick_order">اطلب الآن</button>
+      </div>
+      <div class="product-info">
+        <span class="product-cat" data-i18n="cat_tag_resin">ريزين</span>
+        <h4 class="product-name" data-i18n-product="ocean_board">لوحة ريزين أوقيانوسية</h4>
+        <p class="product-desc" data-i18n="ocean_desc">موجة من الألوان المائية المصبوبة في خشب الجوز</p>
+        <div class="product-footer">
+          <span class="product-price">من 45 USD</span>
+          <div class="product-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="resin kitchen" data-name-ar="طبق تقديم ريزين" data-name-en="Resin Serving Tray" data-name-fr="Plateau de Service Résine" data-name-de="Harz-Serviertablett">
+      <div class="product-img resin-gradient-2">
+        <div class="product-emoji">🍽️</div>
+        <div class="product-badge bestseller" data-i18n="badge_best">الأكثر طلباً</div>
+        <button class="quick-order" data-product="resin-tray" data-i18n="quick_order">اطلب الآن</button>
+      </div>
+      <div class="product-info">
+        <span class="product-cat" data-i18n="cat_tag_resin">ريزين</span>
+        <h4 class="product-name" data-i18n-product="serving_tray">طبق تقديم ريزين</h4>
+        <p class="product-desc" data-i18n="tray_desc">طبق تقديم فاخر بألوان الغروب المنعكسة في الريزين</p>
+        <div class="product-footer">
+          <span class="product-price">من 60 USD</span>
+          <div class="product-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="resin gift decor" data-name-ar="إطار صورة ريزين" data-name-en="Resin Photo Frame" data-name-fr="Cadre Photo Résine" data-name-de="Harz-Bilderrahmen">
+      <div class="product-img resin-gradient-3">
+        <div class="product-emoji">🖼️</div>
+        <button class="quick-order" data-product="resin-frame" data-i18n="quick_order">اطلب الآن</button>
+      </div>
+      <div class="product-info">
+        <span class="product-cat" data-i18n="cat_tag_resin">ريزين</span>
+        <h4 class="product-name" data-i18n-product="photo_frame">إطار صورة ريزين</h4>
+        <p class="product-desc" data-i18n="frame_desc">إطار صور فريد يجمع الخشب مع ريزين ملون مخصص</p>
+        <div class="product-footer">
+          <span class="product-price">من 35 USD</span>
+          <div class="product-stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="resin decor" data-name-ar="ساعة ريزين جدارية" data-name-en="Resin Wall Clock" data-name-fr="Horloge Murale Résine" data-name-de="Harz-Wanduhr">
+      <div class="product-img resin-gradient-4">
+        <div class="product-emoji">🕐</div>
+        <div class="product-badge new" data-i18n="badge_new">جديد</div>
+        <button class="quick-order" data-product="resin-clock" data-i18n="quick_order">اطلب الآن</button>
+      </div>
+      <div class="product-info">
+        <span class="product-cat" data-i18n="cat_tag_resin">ريزين</span>
+        <h4 class="product-name" data-i18n-product="wall_clock">ساعة ريزين جدارية</h4>
+        <p class="product-desc" data-i18n="clock_desc">ساعة جدارية فنية تجمع الوقت مع الجمال</p>
+        <div class="product-footer">
+          <span class="product-price">من 80 USD</span>
+          <div class="product-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category: Natural -->
+    <div class="category-label full-width" style="grid-column: 1/-1; margin-top: 2rem;">
+      <h3 data-i18n="cat_natural">🌳 خشب طبيعي بدون ريزين</h3>
+      <p data-i18n="cat_natural_sub">جمال الخشب في أنقى صورة — دافئ، طبيعي، خالد</p>
+    </div>
+
+    <div class="product-card" data-category="natural kitchen" data-name-ar="لوح تقطيع خشبي" data-name-en="Wooden Cutting Board" data-name-fr="Planche à Découper" data-name-de="Schneidebrett">
+      <div class="product-img natural-gradient-1">
+        <div class="product-emoji">🔪</div>
+        <div class="product-badge bestseller" data-i18n="badge_best">الأكثر طلباً</div>
+        <button class="quick-order" data-product="cutting-board" data-i18n="quick_order">اطلب الآن</button>
+      </div>
+      <div class="product-info">
+        <span class="product-cat" data-i18n="cat_tag_natural">طبيعي</span>
+        <h4 class="product-name" data-i18n-product="cutting_board">لوح تقطيع خشبي</h4>
+        <p class="product-desc" data-i18n="cutting_desc">لوح تقطيع من خشب الزيتون المعالج — جمال وعملية</p>
+        <div class="product-footer">
+          <span class="product-price">من 25 USD</span>
+          <div class="product-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="natural gift decor" data-name-ar="لافتة خشبية منقوشة" data-name-en="Engraved Wood Sign" data-name-fr="Panneau Bois Gravé" data-name-de="Graviertes Holzschild">
+      <div class="product-img natural-gradient-2">
+        <div class="product-emoji">🪵</div>
+        <button class="quick-order" data-product="wood-sign" data-i18n="quick_order">اطلب الآن</button>
+      </div>
+      <div class="product-info">
+        <span class="product-cat" data-i18n="cat_tag_natural">طبيعي</span>
+        <h4 class="product-name" data-i18n-product="wood_sign">لافتة خشبية منقوشة</h4>
+        <p class="product-desc" data-i18n="sign_desc">لافتة بنقش مخصص — اسمك، عبارتك، أو رسالتك</p>
+        <div class="product-footer">
+          <span class="product-price">من 20 USD</span>
+          <div class="product-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="natural kitchen" data-name-ar="ملعقة خشبية يدوية" data-name-en="Hand-carved Wooden Spoon" data-name-fr="Cuillère Bois Sculptée" data-name-de="Handgeschnitzte Holzlöffel">
+      <div class="product-img natural-gradient-3">
+        <div class="product-emoji">🥄</div>
+        <button class="quick-order" data-product="wood-spoon" data-i18n="quick_order">اطلب الآن</button>
+      </div>
+      <div class="product-info">
+        <span class="product-cat" data-i18n="cat_tag_natural">طبيعي</span>
+        <h4 class="product-name" data-i18n-product="wood_spoon">ملعقة خشبية يدوية</h4>
+        <p class="product-desc" data-i18n="spoon_desc">منحوتة يدوياً من الخشب الصلب — هدية مطبخية مميزة</p>
+        <div class="product-footer">
+          <span class="product-price">من 15 USD</span>
+          <div class="product-stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-category="natural decor gift" data-name-ar="صينية تقديم خشبية" data-name-en="Wooden Serving Board" data-name-fr="Plateau en Bois" data-name-de="Holz-Servierbrett">
+      <div class="product-img natural-gradient-4">
+        <div class="product-emoji">🫙</div>
+        <button class="quick-order" data-product="wood-tray" data-i18n="quick_order">اطلب الآن</button>
+      </div>
+      <div class="product-info">
+        <span class="product-cat" data-i18n="cat_tag_natural">طبيعي</span>
+        <h4 class="product-name" data-i18n-product="wood_tray">صينية تقديم خشبية</h4>
+        <p class="product-desc" data-i18n="wood_tray_desc">صينية من خشب السنديان بمقابض طبيعية</p>
+        <div class="product-footer">
+          <span class="product-price">من 30 USD</span>
+          <div class="product-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="no-results" class="no-results hidden" data-i18n="no_results">لا توجد منتجات تطابق بحثك</div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about-section">
+  <div class="about-visual">
+    <div class="about-img-frame">
+      <div class="about-art">
+        <div class="wood-rings"></div>
+        <div class="about-icon-big">🪵</div>
+      </div>
+    </div>
+  </div>
+  <div class="about-content">
+    <span class="section-tag" data-i18n="about_tag">قصتنا</span>
+    <h2 data-i18n="about_title">الخشب ليس مادة — هو فن</h2>
+    <p data-i18n="about_p1">
+      بدأت رحلتنا من ورشة صغيرة، حيث كانت يدان حرفيتان تحوّلان قطعة خشب بسيطة إلى تحفة فنية. اليوم، نبيع في أكثر من 18 دولة لأن كل قطعة نصنعها تحمل روحاً خاصة.
+    </p>
+    <p data-i18n="about_p2">
+      نؤمن بأن الجمال الحقيقي يسكن في الطبيعة. لذا نختار أخشاباً مستدامة، ونعالجها بيد الإنسان لا بالآلة، وندمجها أحياناً مع الريزين لتولد قطع لا تُنسى.
+    </p>
+    <div class="about-features">
+      <div class="about-feat"><span>🌿</span> <span data-i18n="feat1">أخشاب مستدامة معتمدة</span></div>
+      <div class="about-feat"><span>🎨</span> <span data-i18n="feat2">ألوان ريزين لا نهائية</span></div>
+      <div class="about-feat"><span>✍️</span> <span data-i18n="feat3">نقش مخصص بالليزر</span></div>
+      <div class="about-feat"><span>📦</span> <span data-i18n="feat4">تغليف هدايا احترافي</span></div>
+    </div>
+    <a href="#order" class="btn-primary" data-i18n="about_cta">اطلب قطعتك</a>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials" class="testimonials-section">
+  <div class="section-header">
+    <span class="section-tag" data-i18n="reviews_tag">آراء حقيقية</span>
+    <h2 data-i18n="reviews_title">ماذا يقول عملاؤنا</h2>
+  </div>
+  <div class="testimonials-track" id="testimonials-track">
+
+    <div class="testimonial-card">
+      <div class="t-header">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2)">SA</div>
+        <div>
+          <div class="t-name">Sarah Anderson</div>
+          <div class="t-location">🇺🇸 New York, USA</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+      </div>
+      <p class="t-text">"Absolutely stunning resin board! The ocean colors are even more beautiful in person. Perfect centerpiece for my kitchen. Shipping was fast and packaging was very secure."</p>
+      <div class="t-product">Ocean Resin Board</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="t-header">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c)">ML</div>
+        <div>
+          <div class="t-name">Marie Lefebvre</div>
+          <div class="t-location">🇫🇷 Lyon, France</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+      </div>
+      <p class="t-text">"Magnifique plateau en bois! La qualité est exceptionnelle et la personnalisation était parfaite. Je recommande vivement à tous mes amis. Un vrai travail d'artiste!"</p>
+      <div class="t-product">Plateau Résine</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="t-header">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe)">KM</div>
+        <div>
+          <div class="t-name">Klaus Müller</div>
+          <div class="t-location">🇩🇪 München, Germany</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+      </div>
+      <p class="t-text">"Wunderschöne Handarbeit! Das Schneidebrett ist von höchster Qualität. Die persönliche Gravur war ein perfektes Geschenk für meine Frau. Sehr zu empfehlen!"</p>
+      <div class="t-product">Holz Schneidebrett</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="t-header">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #43e97b, #38f9d7)">FA</div>
+        <div>
+          <div class="t-name">فيصل الأحمدي</div>
+          <div class="t-location">🇸🇦 الرياض، السعودية</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+      </div>
+      <p class="t-text">"قطعة رائعة جداً! اشتريت ساعة الريزين هدية لأخي وكانت المفاجأة الأجمل. الصنعة دقيقة والألوان مبهرة. سأطلب قطعاً أخرى قريباً بكل تأكيد."</p>
+      <div class="t-product">ساعة ريزين جدارية</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="t-header">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140)">ER</div>
+        <div>
+          <div class="t-name">Emma Rossi</div>
+          <div class="t-location">🇮🇹 Milano, Italy</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+      </div>
+      <p class="t-text">"Prodotto straordinario! Il vassoio in legno naturale è bellissimo e molto pratico. La qualità supera le aspettative. Lo consiglio vivamente a chiunque ami i prodotti artigianali."</p>
+      <div class="t-product">Wooden Serving Board</div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="t-header">
+        <div class="t-avatar" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb)">NY</div>
+        <div>
+          <div class="t-name">نورة اليحيى</div>
+          <div class="t-location">🇦🇪 دبي، الإمارات</div>
+        </div>
+        <div class="t-stars">★★★★★</div>
+      </div>
+      <p class="t-text">"تحفة فنية حقيقية! اللوحة الريزينية زيّنت مكتبي وأصبحت محط إعجاب كل من زارني. جودة استثنائية وتعامل محترف من بداية الطلب حتى التسليم."</p>
+      <div class="t-product">لوحة ريزين أوقيانوسية</div>
+    </div>
+
+  </div>
+  <div class="testimonials-nav">
+    <button class="t-nav-btn" id="t-prev">←</button>
+    <div class="t-dots" id="t-dots"></div>
+    <button class="t-nav-btn" id="t-next">→</button>
+  </div>
+</section>
+
+<!-- ===== PAYMENT ===== -->
+<section class="payment-section">
+  <div class="section-header">
+    <span class="section-tag" data-i18n="payment_tag">دفع آمن</span>
+    <h2 data-i18n="payment_title">طرق الدفع المتاحة</h2>
+    <p data-i18n="payment_sub">نقبل جميع طرق الدفع العالمية والمحلية</p>
+  </div>
+  <div class="payment-grid">
+    <div class="payment-card">
+      <div class="pay-icon">💳</div>
+      <h4 data-i18n="pay1">بطاقات بنكية</h4>
+      <p>Visa / Mastercard / Amex</p>
+    </div>
+    <div class="payment-card">
+      <div class="pay-icon">🅿️</div>
+      <h4>PayPal</h4>
+      <p data-i18n="pay2">دفع آمن عالمياً</p>
+    </div>
+    <div class="payment-card">
+      <div class="pay-icon">🏦</div>
+      <h4 data-i18n="pay3">تحويل بنكي</h4>
+      <p data-i18n="pay3_sub">IBAN متاح عند الطلب</p>
+    </div>
+    <div class="payment-card">
+      <div class="pay-icon">💵</div>
+      <h4 data-i18n="pay4">عند الاستلام</h4>
+      <p data-i18n="pay4_sub">للطلبات المحلية</p>
+    </div>
+    <div class="payment-card">
+      <div class="pay-icon">📱</div>
+      <h4 data-i18n="pay5">محافظ رقمية</h4>
+      <p>Apple Pay / Google Pay</p>
+    </div>
+    <div class="payment-card">
+      <div class="pay-icon">🌐</div>
+      <h4 data-i18n="pay6">Western Union</h4>
+      <p data-i18n="pay6_sub">تحويل دولي</p>
+    </div>
+  </div>
+  <div class="security-badges">
+    <span>🔒 SSL Secured</span>
+    <span>✓ Verified by Visa</span>
+    <span>🛡️ Buyer Protection</span>
+    <span>🌍 International Shipping</span>
+  </div>
+</section>
+
+<!-- ===== SMART ORDER ===== -->
+<section id="order" class="order-section">
+  <div class="section-header">
+    <span class="section-tag" data-i18n="order_tag">طلب ذكي</span>
+    <h2 data-i18n="order_title">اطلب قطعتك المخصصة</h2>
+    <p data-i18n="order_sub">أخبرنا عن طلبك وسنتواصل معك خلال 24 ساعة</p>
+  </div>
+  <div class="order-container">
+    <div class="order-steps" id="order-steps">
+
+      <!-- Step 1 -->
+      <div class="order-step active" data-step="1">
+        <div class="step-header">
+          <span class="step-num">01</span>
+          <h3 data-i18n="step1_title">اختر المنتج</h3>
+        </div>
+        <div class="step-body">
+          <div class="product-choices" id="product-choices">
+            <label class="choice-card">
+              <input type="radio" name="product" value="ocean-resin"/>
+              <span class="choice-emoji">🌊</span>
+              <span data-i18n="choice_ocean">لوحة ريزين أوقيانوسية</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="product" value="resin-tray"/>
+              <span class="choice-emoji">🍽️</span>
+              <span data-i18n="choice_tray_resin">طبق تقديم ريزين</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="product" value="resin-clock"/>
+              <span class="choice-emoji">🕐</span>
+              <span data-i18n="choice_clock">ساعة ريزين جدارية</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="product" value="resin-frame"/>
+              <span class="choice-emoji">🖼️</span>
+              <span data-i18n="choice_frame">إطار صورة ريزين</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="product" value="cutting-board"/>
+              <span class="choice-emoji">🔪</span>
+              <span data-i18n="choice_cutting">لوح تقطيع</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="product" value="wood-sign"/>
+              <span class="choice-emoji">🪵</span>
+              <span data-i18n="choice_sign">لافتة منقوشة</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="product" value="wood-spoon"/>
+              <span class="choice-emoji">🥄</span>
+              <span data-i18n="choice_spoon">ملعقة خشبية</span>
+            </label>
+            <label class="choice-card choice-custom">
+              <input type="radio" name="product" value="custom"/>
+              <span class="choice-emoji">✨</span>
+              <span data-i18n="choice_custom">طلب مخصص</span>
+            </label>
+          </div>
+        </div>
+        <button class="step-next btn-primary" onclick="nextStep(1)" data-i18n="step_next">التالي →</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="order-step" data-step="2">
+        <div class="step-header">
+          <span class="step-num">02</span>
+          <h3 data-i18n="step2_title">التفاصيل والتخصيص</h3>
+        </div>
+        <div class="step-body">
+          <div class="form-row">
+            <label data-i18n="qty_label">الكمية</label>
+            <div class="qty-control">
+              <button type="button" onclick="changeQty(-1)">−</button>
+              <span id="qty-display">1</span>
+              <button type="button" onclick="changeQty(1)">+</button>
+            </div>
+          </div>
+          <div class="form-row">
+            <label data-i18n="color_label">اللون / النمط المفضل</label>
+            <div class="color-choices">
+              <button type="button" class="color-opt" data-color="ocean" onclick="selectColor(this)" style="background: linear-gradient(135deg, #0077b6, #00b4d8)">🌊</button>
+              <button type="button" class="color-opt" data-color="sunset" onclick="selectColor(this)" style="background: linear-gradient(135deg, #f77f00, #d62828)">🌅</button>
+              <button type="button" class="color-opt" data-color="forest" onclick="selectColor(this)" style="background: linear-gradient(135deg, #2d6a4f, #95d5b2)">🌿</button>
+              <button type="button" class="color-opt" data-color="galaxy" onclick="selectColor(this)" style="background: linear-gradient(135deg, #7209b7, #3a0ca3)">🌌</button>
+              <button type="button" class="color-opt" data-color="natural" onclick="selectColor(this)" style="background: linear-gradient(135deg, #c8a96e, #8b5e3c)">🪵</button>
+              <button type="button" class="color-opt" data-color="custom" onclick="selectColor(this)" style="background: conic-gradient(red, yellow, green, blue, red)">🎨</button>
+            </div>
+          </div>
+          <div class="form-row">
+            <label data-i18n="engraving_label">نص للنقش (اختياري)</label>
+            <input type="text" id="engraving-text" class="form-input" data-placeholder-i18n="engraving_ph" placeholder="اسمك، عبارة، تاريخ..."/>
+          </div>
+          <div class="form-row">
+            <label data-i18n="notes_label">ملاحظات إضافية</label>
+            <textarea id="order-notes" class="form-input" rows="3" data-placeholder-i18n="notes_ph" placeholder="أي تفاصيل خاصة تريدها..."></textarea>
+          </div>
+        </div>
+        <div class="step-nav">
+          <button class="btn-ghost" onclick="prevStep(2)" data-i18n="step_back">← السابق</button>
+          <button class="btn-primary" onclick="nextStep(2)" data-i18n="step_next">التالي →</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="order-step" data-step="3">
+        <div class="step-header">
+          <span class="step-num">03</span>
+          <h3 data-i18n="step3_title">معلومات التواصل</h3>
+        </div>
+        <div class="step-body">
+          <div class="form-row">
+            <label data-i18n="name_label">الاسم الكامل *</label>
+            <input type="text" id="customer-name" class="form-input" data-placeholder-i18n="name_ph" placeholder="اسمك الكريم"/>
+          </div>
+          <div class="form-row">
+            <label data-i18n="country_label">الدولة</label>
+            <select id="customer-country" class="form-input">
+              <option value="">اختر دولتك</option>
+              <option value="SA">🇸🇦 السعودية</option>
+              <option value="AE">🇦🇪 الإمارات</option>
+              <option value="EG">🇪🇬 مصر</option>
+              <option value="TN">🇹🇳 تونس</option>
+              <option value="MA">🇲🇦 المغرب</option>
+              <option value="DZ">🇩🇿 الجزائر</option>
+              <option value="US">🇺🇸 USA</option>
+              <option value="FR">🇫🇷 France</option>
+              <option value="DE">🇩🇪 Germany</option>
+              <option value="GB">🇬🇧 UK</option>
+              <option value="other">🌍 Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label data-i18n="contact_label">واتساب أو إيميل *</label>
+            <input type="text" id="customer-contact" class="form-input" placeholder="+XXX... or email@..."/>
+          </div>
+          <div class="send-options">
+            <h4 data-i18n="send_via">أرسل الطلب عبر:</h4>
+            <div class="send-btns">
+              <button type="button" class="send-wa" id="send-whatsapp" onclick="sendOrder('whatsapp')">
+                <span>📱</span> <span data-i18n="send_wa">واتساب</span>
+              </button>
+              <button type="button" class="send-email" id="send-email" onclick="sendOrder('email')">
+                <span>📧</span> <span data-i18n="send_em">إيميل</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="step-nav">
+          <button class="btn-ghost" onclick="prevStep(3)" data-i18n="step_back">← السابق</button>
+        </div>
+      </div>
+
+      <!-- Order Summary (hidden until submit) -->
+      <div id="order-summary" class="order-summary hidden">
+        <div class="summary-icon">✅</div>
+        <h3 data-i18n="summary_title">ملخص طلبك جاهز!</h3>
+        <div id="summary-content"></div>
+        <p class="summary-note" data-i18n="summary_note">سيتم توجيهك لإرسال الطلب عبر واتساب أو إيميل</p>
+        <button class="btn-primary" onclick="resetOrder()" data-i18n="new_order">طلب جديد</button>
+      </div>
+
+    </div>
+
+    <!-- Step Progress -->
+    <div class="step-progress">
+      <div class="progress-dot active" data-step="1"><span data-i18n="prog1">المنتج</span></div>
+      <div class="progress-line"></div>
+      <div class="progress-dot" data-step="2"><span data-i18n="prog2">التفاصيل</span></div>
+      <div class="progress-line"></div>
+      <div class="progress-dot" data-step="3"><span data-i18n="prog3">التواصل</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section">
+  <div class="section-header">
+    <span class="section-tag" data-i18n="contact_tag">تواصل معنا</span>
+    <h2 data-i18n="contact_title">نحن هنا لمساعدتك</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon">📱</div>
+      <h4>WhatsApp</h4>
+      <p>+216 23 068 889</p>
+      <a href="https://wa.me/21623068889" class="contact-link" target="_blank" data-i18n="chat_now">تحدث الآن</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📧</div>
+      <h4>Email</h4>
+      <p>nobleolivewood@gmail.com</p>
+      <a href="mailto:nobleolivewood@gmail.com" class="contact-link" data-i18n="send_email_btn">أرسل بريداً</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📸</div>
+      <h4>Instagram</h4>
+      <p>@nobleolivewood</p>
+      <a href="https://instagram.com/nobleolivewood" class="contact-link" target="_blank" data-i18n="follow_us">تابعنا</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📘</div>
+      <h4>Facebook</h4>
+      <p>@nobleolivewood</p>
+      <a href="https://facebook.com/nobleolivewood" class="contact-link" target="_blank" data-i18n="follow_us">تابعنا</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">🕐</div>
+      <h4 data-i18n="hours_title">ساعات العمل</h4>
+      <p data-i18n="hours">السبت – الخميس: 9ص – 9م</p>
+      <span class="online-badge" data-i18n="online_now">● متاح الآن</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="logo.png" alt="Noble Olivewood" class="logo-img logo-img-footer"/>
+      </div>
+      <p data-i18n="footer_tagline">حرفة تحكي قصصاً، خشب يعيش إلى الأبد</p>
+    </div>
+    <div class="footer-links">
+      <a href="#products" data-i18n="nav_products">المنتجات</a>
+      <a href="#about" data-i18n="nav_about">عنّا</a>
+      <a href="#order" data-i18n="nav_order">اطلب</a>
+      <a href="#contact" data-i18n="nav_contact">تواصل</a>
+    </div>
+    <div class="footer-copy">
+      <p>© 2025 ArtisanWood. <span data-i18n="footer_rights">جميع الحقوق محفوظة.</span></p>
+      <p data-i18n="footer_made">صُنع بيد الإنسان 🤲</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== AI CHAT ASSISTANT ===== -->
+<div id="chat-widget">
+  <button id="chat-toggle" aria-label="AI Assistant">
+    <span class="chat-icon">💬</span>
+    <span class="chat-label" data-i18n="chat_btn">مساعد ذكي</span>
+    <span class="chat-dot"></span>
+  </button>
+  <div id="chat-box" class="hidden">
+    <div class="chat-header">
+      <div class="chat-avatar">🤖</div>
+      <div>
+        <div class="chat-title" data-i18n="chat_title">مساعد ArtisanWood</div>
+        <div class="chat-status" data-i18n="chat_status">● متاح دائماً</div>
+      </div>
+      <button class="chat-close" id="chat-close">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot">
+        <span data-i18n="chat_welcome">مرحباً! 👋 أنا مساعدك الذكي. أخبرني ماذا تبحث عنه — هدية، ديكور، مطبخ — وسأقترح لك المثالي!</span>
+      </div>
+    </div>
+    <div class="chat-quick-btns" id="chat-quick">
+      <button onclick="sendQuick('gift')" data-i18n="q_gift">🎁 هدية</button>
+      <button onclick="sendQuick('kitchen')" data-i18n="q_kitchen">🍳 مطبخ</button>
+      <button onclick="sendQuick('decor')" data-i18n="q_decor">🏠 ديكور</button>
+      <button onclick="sendQuick('price')" data-i18n="q_price">💰 الأسعار</button>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" data-placeholder-i18n="chat_input_ph" placeholder="اكتب سؤالك هنا..." onkeydown="if(event.key==='Enter') sendChat()"/>
+      <button onclick="sendChat()" class="chat-send">→</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CART TOAST ===== -->
+<div id="cart-toast" class="cart-toast hidden">
+  <span class="toast-icon">✓</span>
+  <span id="toast-msg" data-i18n="toast_added">تمت إضافة المنتج للطلب!</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
