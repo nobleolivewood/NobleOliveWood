@@ -1,0 +1,467 @@
+// ============================================================
+// NOBLE OLIVEWOOD — PRODUCTS SYSTEM
+// Modal + Cart + Reviews
+// ============================================================
+
+// ① PRODUCTS DATABASE
+// To add a new product: copy a block and fill in your details
+const PRODUCTS = {
+  'heart-board': {
+    id: 'heart-board',
+    category: 'natural kitchen gift decor',
+    images: [
+      'heart-board-1.jpg',
+      'heart-board-2.jpg',
+      'heart-board-3.jpg',
+      'heart-board-4.jpg'
+    ],
+    badge: '⭐ Bestseller',
+    cat: '🌿 Natural Olive Wood',
+    rating: 4.9,
+    reviewCount: 24,
+    name: {
+      ar: 'لوح تقطيم شكل قلب',
+      en: 'Heart-Shaped Cutting Board',
+      fr: 'Planche Cœur en Bois d\'Olivier',
+      de: 'Herzförmiges Olivenholzbrett'
+    },
+    story: {
+      ar: 'من غابات الزيتون التونسية العريقة، تُولد كل قطعة وحيدة في العالم. خطوط الخشب تحكي قصة شجرة عاشت قروناً — دفء طبيعي، جمال لا يُعاد، روح لا تُنسخ. هدية تدوم عمراً، وقطعة تُزيّن أي مطبخ بلمسة راقية.',
+      en: 'From Tunisia\'s ancient olive groves, each piece is born one-of-a-kind. The wood grain tells the story of a tree that lived for centuries — natural warmth, unrepeatable beauty, a soul that cannot be copied. A gift that lasts a lifetime, a piece that elevates any kitchen.',
+      fr: 'Des oliveraies ancestrales de Tunisie, chaque pièce naît unique au monde. Les veines du bois racontent l\'histoire d\'un arbre centenaire — chaleur naturelle, beauté irréplicable, âme incomparable. Un cadeau qui dure toute une vie.',
+      de: 'Aus Tunesiens uralten Olivenhainen wird jedes Stück als Unikat geboren. Die Maserung erzählt die Geschichte eines jahrhundertealten Baumes — natürliche Wärme, unwiederholbare Schönheit, eine Seele die nicht kopiert werden kann.'
+    },
+    sizes: [
+      { label: '25 cm', price: 42 },
+      { label: '30 cm', price: 49 }
+    ],
+    hashtags: ['#Handmade', '#OliveWood', '#UniqueGrain', '#LuxuryKitchenDecor', '#GiftableItem'],
+    defaultReviews: [
+      {
+        name: 'Sarah M.',
+        country: '🇺🇸 USA',
+        rating: 5,
+        text: 'Absolutely stunning! The grain pattern is unlike anything I\'ve ever seen. Perfect gift for my sister\'s wedding. Fast shipping too!',
+        date: '2025-03-14'
+      },
+      {
+        name: 'Marie L.',
+        country: '🇫🇷 France',
+        rating: 5,
+        text: 'Magnifique! Le bois est d\'une qualité exceptionnelle et la forme cœur est tellement romantique. Je l\'ai offert pour la Saint-Valentin et c\'était un succès total!',
+        date: '2025-02-15'
+      },
+      {
+        name: 'Emma K.',
+        country: '🇩🇪 Germany',
+        rating: 5,
+        text: 'Wunderschönes Stück! Die Holzmaserung ist einzigartig und die Qualität ist hervorragend. Sehr schnelle Lieferung und tolle Verpackung.',
+        date: '2025-01-20'
+      },
+      {
+        name: 'نورة الزهراني',
+        country: '🇸🇦 السعودية',
+        rating: 5,
+        text: 'قطعة رائعة جداً! اشتريتها هدية لصديقتي وأُعجبت بها كثيراً. الخشب عالي الجودة والشكل جميل جداً. شكراً Noble Olivewood!',
+        date: '2025-04-02'
+      },
+      {
+        name: 'Giulia R.',
+        country: '🇮🇹 Italy',
+        rating: 4,
+        text: 'Beautiful piece! The wood is very high quality and the heart shape is perfect. Shipping took a bit longer than expected but worth the wait.',
+        date: '2025-03-28'
+      }
+    ]
+  }
+
+  // ──────────────────────────────────────────
+  // ADD NEW PRODUCT HERE — copy this template:
+  // ──────────────────────────────────────────
+  // 'product-id': {
+  //   id: 'product-id',
+  //   category: 'natural kitchen gift decor',  // choose from: natural resin kitchen gift decor
+  //   images: ['img1.jpg', 'img2.jpg'],
+  //   badge: '🆕 New',
+  //   cat: '🌿 Natural Olive Wood',
+  //   rating: 4.8,
+  //   reviewCount: 0,
+  //   name: { ar: '...', en: '...', fr: '...', de: '...' },
+  //   story: { ar: '...', en: '...', fr: '...', de: '...' },
+  //   sizes: [{ label: 'Standard', price: 35 }],
+  //   hashtags: ['#Handmade', '#OliveWood'],
+  //   defaultReviews: []
+  // }
+};
+
+// ============================================================
+// ② STATE
+// ============================================================
+let currentProduct = null;
+let selectedSize = 0;
+let modalQty = 1;
+let selectedRating = 0;
+let cart = JSON.parse(localStorage.getItem('now_cart') || '[]');
+
+// ============================================================
+// ③ MODAL SYSTEM
+// ============================================================
+
+function openProduct(productId) {
+  const p = PRODUCTS[productId];
+  if (!p) return;
+  currentProduct = p;
+  selectedSize = 0;
+  modalQty = 1;
+
+  const lang = window.currentLang || 'ar';
+
+  // Title & Story
+  document.getElementById('modal-title').textContent = p.name[lang] || p.name['en'];
+  document.getElementById('modal-story').textContent = p.story[lang] || p.story['en'];
+  document.getElementById('modal-cat').textContent = p.cat;
+
+  // Stars
+  const stars = '★'.repeat(Math.floor(p.rating)) + (p.rating % 1 >= 0.5 ? '½' : '');
+  document.getElementById('modal-stars').textContent = '★★★★★'.slice(0, Math.round(p.rating)) + '☆'.repeat(5 - Math.round(p.rating));
+  document.getElementById('modal-review-count').textContent = `(${getReviews(productId).length} تقييم)`;
+
+  // Gallery
+  const mainImg = document.getElementById('modal-main-img');
+  mainImg.src = p.images[0];
+  mainImg.alt = p.name['en'];
+
+  const thumbsEl = document.getElementById('gallery-thumbs');
+  thumbsEl.innerHTML = '';
+  p.images.forEach((img, i) => {
+    const thumb = document.createElement('img');
+    thumb.src = img;
+    thumb.alt = `view ${i+1}`;
+    thumb.className = i === 0 ? 'thumb active' : 'thumb';
+    thumb.onclick = () => switchImage(img, thumb);
+    thumbsEl.appendChild(thumb);
+  });
+
+  // Sizes
+  const sizesEl = document.getElementById('size-options');
+  sizesEl.innerHTML = '';
+  p.sizes.forEach((s, i) => {
+    const btn = document.createElement('button');
+    btn.className = i === 0 ? 'size-btn active' : 'size-btn';
+    btn.textContent = `${s.label} — ${s.price}€`;
+    btn.onclick = () => selectSize(i, btn);
+    sizesEl.appendChild(btn);
+  });
+
+  // Hashtags
+  const hashEl = document.getElementById('modal-hashtags');
+  hashEl.innerHTML = p.hashtags.map(h => `<span class="hash-tag">${h}</span>`).join('');
+
+  // Total
+  updateModalTotal();
+
+  // Reviews
+  renderReviews(productId);
+
+  // Show modal
+  document.getElementById('product-modal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProduct() {
+  document.getElementById('product-modal').classList.add('hidden');
+  document.body.style.overflow = '';
+  document.getElementById('review-form').classList.add('hidden');
+  selectedRating = 0;
+}
+
+function closeModalOutside(e) {
+  if (e.target.id === 'product-modal') closeProduct();
+}
+
+function switchImage(src, thumb) {
+  document.getElementById('modal-main-img').src = src;
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
+function selectSize(index, btn) {
+  selectedSize = index;
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  updateModalTotal();
+}
+
+function changeModalQty(delta) {
+  modalQty = Math.max(1, Math.min(99, modalQty + delta));
+  document.getElementById('modal-qty').textContent = modalQty;
+  updateModalTotal();
+}
+
+function updateModalTotal() {
+  if (!currentProduct) return;
+  const price = currentProduct.sizes[selectedSize].price;
+  const total = price * modalQty;
+  document.getElementById('modal-total-price').textContent = `${total}€`;
+}
+
+// ============================================================
+// ④ CART SYSTEM
+// ============================================================
+
+function addToCart() {
+  const p = currentProduct;
+  const size = p.sizes[selectedSize];
+  const lang = window.currentLang || 'ar';
+
+  const item = {
+    id: p.id,
+    name: p.name[lang] || p.name['en'],
+    size: size.label,
+    price: size.price,
+    qty: modalQty,
+    img: p.images[0]
+  };
+
+  // Check if same item exists
+  const existing = cart.find(c => c.id === item.id && c.size === item.size);
+  if (existing) {
+    existing.qty += item.qty;
+  } else {
+    cart.push(item);
+  }
+
+  saveCart();
+  updateCartFab();
+  showCartToast(item.name);
+  closeProduct();
+  openCart();
+}
+
+function orderNow() {
+  const p = currentProduct;
+  const size = p.sizes[selectedSize];
+  const lang = window.currentLang || 'ar';
+  const name = p.name[lang] || p.name['en'];
+
+  const msg = `🫒 Noble Olivewood — New Order\n\n` +
+    `Product: ${name}\n` +
+    `Size: ${size.label}\n` +
+    `Price: ${size.price}€\n` +
+    `Quantity: ${modalQty}\n` +
+    `Total: ${size.price * modalQty}€\n\n` +
+    `Please confirm availability and shipping details.`;
+
+  window.open(`https://wa.me/21623068889?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+function saveCart() {
+  localStorage.setItem('now_cart', JSON.stringify(cart));
+}
+
+function updateCartFab() {
+  const fab = document.getElementById('cart-fab');
+  const count = cart.reduce((sum, i) => sum + i.qty, 0);
+  document.getElementById('cart-count').textContent = count;
+  fab.classList.toggle('hidden', count === 0);
+}
+
+function showCartToast(name) {
+  const toast = document.getElementById('cart-toast');
+  const msg = document.getElementById('toast-msg');
+  msg.textContent = `✓ "${name}" أُضيف للسلة!`;
+  toast.classList.remove('hidden');
+  setTimeout(() => toast.classList.add('hidden'), 3000);
+}
+
+function openCart() {
+  renderCart();
+  document.getElementById('cart-sidebar').classList.remove('hidden');
+  document.getElementById('cart-overlay').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  document.getElementById('cart-sidebar').classList.add('hidden');
+  document.getElementById('cart-overlay').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+function renderCart() {
+  const el = document.getElementById('cart-items');
+  if (cart.length === 0) {
+    el.innerHTML = '<div class="cart-empty">🛒 السلة فارغة</div>';
+    document.getElementById('cart-grand-total').textContent = '0€';
+    return;
+  }
+
+  el.innerHTML = cart.map((item, i) => `
+    <div class="cart-item">
+      <img src="${item.img}" alt="${item.name}" class="cart-item-img"/>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-size">${item.size} — ${item.price}€</div>
+        <div class="cart-item-qty-row">
+          <button onclick="updateCartQty(${i}, -1)">−</button>
+          <span>${item.qty}</span>
+          <button onclick="updateCartQty(${i}, 1)">+</button>
+          <button class="cart-remove" onclick="removeCartItem(${i})">🗑️</button>
+        </div>
+      </div>
+      <div class="cart-item-total">${item.price * item.qty}€</div>
+    </div>
+  `).join('');
+
+  const grand = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+  document.getElementById('cart-grand-total').textContent = `${grand}€`;
+}
+
+function updateCartQty(index, delta) {
+  cart[index].qty = Math.max(1, cart[index].qty + delta);
+  saveCart();
+  updateCartFab();
+  renderCart();
+}
+
+function removeCartItem(index) {
+  cart.splice(index, 1);
+  saveCart();
+  updateCartFab();
+  renderCart();
+}
+
+function checkoutCart() {
+  if (cart.length === 0) return;
+  const grand = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+  let msg = `🫒 Noble Olivewood — Cart Order\n\n`;
+  cart.forEach(item => {
+    msg += `• ${item.name} (${item.size}) × ${item.qty} = ${item.price * item.qty}€\n`;
+  });
+  msg += `\n💰 Total: ${grand}€\n\nPlease confirm my order and provide shipping details.`;
+  window.open(`https://wa.me/21623068889?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+// ============================================================
+// ⑤ REVIEWS SYSTEM (localStorage)
+// ============================================================
+
+function getReviews(productId) {
+  const stored = JSON.parse(localStorage.getItem(`reviews_${productId}`) || '[]');
+  const defaults = PRODUCTS[productId]?.defaultReviews || [];
+  return [...defaults, ...stored];
+}
+
+function renderReviews(productId) {
+  const reviews = getReviews(productId);
+  const el = document.getElementById('reviews-list');
+  document.getElementById('modal-review-count').textContent = `(${reviews.length} تقييم)`;
+
+  if (reviews.length === 0) {
+    el.innerHTML = '<div class="no-reviews">كن أول من يقيّم هذا المنتج! ⭐</div>';
+    return;
+  }
+
+  // Average
+  const avg = (reviews.reduce((s, r) => s + r.rating, 0) / reviews.length).toFixed(1);
+
+  el.innerHTML = `
+    <div class="reviews-summary">
+      <div class="avg-score">${avg}</div>
+      <div class="avg-stars">${'★'.repeat(Math.round(avg))}${'☆'.repeat(5-Math.round(avg))}</div>
+      <div class="avg-count">${reviews.length} تقييم</div>
+    </div>
+    <div class="reviews-scroll">
+      ${reviews.map(r => `
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">${r.name.charAt(0).toUpperCase()}</div>
+            <div class="reviewer-info">
+              <strong>${r.name}</strong>
+              <span>${r.country || ''}</span>
+            </div>
+            <div class="review-rating">${'★'.repeat(r.rating)}${'☆'.repeat(5-r.rating)}</div>
+          </div>
+          <p class="review-body">${r.text}</p>
+          <div class="review-date">${formatDate(r.date)}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function toggleReviewForm() {
+  const form = document.getElementById('review-form');
+  form.classList.toggle('hidden');
+  if (!form.classList.contains('hidden')) {
+    form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+function setRating(rating) {
+  selectedRating = rating;
+  const stars = document.querySelectorAll('#star-picker span');
+  stars.forEach((s, i) => {
+    s.style.color = i < rating ? '#f59e0b' : '#ccc';
+  });
+}
+
+function submitReview() {
+  const name = document.getElementById('review-name').value.trim();
+  const text = document.getElementById('review-text').value.trim();
+
+  if (!name || !text || selectedRating === 0) {
+    alert('الرجاء ملء الاسم، التعليق، واختيار التقييم ⭐');
+    return;
+  }
+
+  const review = {
+    name,
+    country: '',
+    rating: selectedRating,
+    text,
+    date: new Date().toISOString().split('T')[0]
+  };
+
+  const stored = JSON.parse(localStorage.getItem(`reviews_${currentProduct.id}`) || '[]');
+  stored.push(review);
+  localStorage.setItem(`reviews_${currentProduct.id}`, JSON.stringify(stored));
+
+  // Reset form
+  document.getElementById('review-name').value = '';
+  document.getElementById('review-text').value = '';
+  selectedRating = 0;
+  setRating(0);
+  document.getElementById('review-form').classList.add('hidden');
+
+  // Re-render
+  renderReviews(currentProduct.id);
+
+  // Toast
+  const toast = document.getElementById('cart-toast');
+  document.getElementById('toast-msg').textContent = '✓ شكراً! تم نشر تقييمك';
+  toast.classList.remove('hidden');
+  setTimeout(() => toast.classList.add('hidden'), 3000);
+}
+
+// ============================================================
+// ⑥ KEYBOARD NAVIGATION
+// ============================================================
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeProduct();
+    closeCart();
+  }
+});
+
+// ============================================================
+// ⑦ INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  updateCartFab();
+});

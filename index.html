@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="products.css"/>
 </head>
 <body>
 
@@ -123,162 +124,166 @@
     </div>
     <div class="filters" id="filters">
       <button class="filter-btn active" data-filter="all" data-i18n="filter_all">الكل</button>
-      <button class="filter-btn" data-filter="resin" data-i18n="filter_resin">مع ريزين</button>
       <button class="filter-btn" data-filter="natural" data-i18n="filter_natural">بدون ريزين</button>
+      <button class="filter-btn" data-filter="resin" data-i18n="filter_resin">مع ريزين</button>
       <button class="filter-btn" data-filter="kitchen" data-i18n="filter_kitchen">مطبخ</button>
       <button class="filter-btn" data-filter="decor" data-i18n="filter_decor">ديكور</button>
       <button class="filter-btn" data-filter="gift" data-i18n="filter_gift">هدايا</button>
     </div>
   </div>
 
-  <!-- Category: Resin -->
-  <div class="category-label">
-    <h3 data-i18n="cat_resin">🌊 خشب مع ريزين</h3>
-    <p data-i18n="cat_resin_sub">قطع فنية تجمع الخشب الطبيعي مع الريزين الشفاف بألوان مذهلة</p>
-  </div>
   <div class="products-grid" id="products-grid">
 
-    <div class="product-card" data-category="resin decor gift" data-name-ar="لوحة ريزين أوقيانوسية" data-name-en="Ocean Resin Board" data-name-fr="Plateau Résine Océan" data-name-de="Ozean-Harz-Brett">
-      <div class="product-img resin-gradient-1">
-        <div class="product-emoji">🌊</div>
-        <div class="product-badge new" data-i18n="badge_new">جديد</div>
-        <button class="quick-order" data-product="ocean-resin" data-i18n="quick_order">اطلب الآن</button>
-      </div>
-      <div class="product-info">
-        <span class="product-cat" data-i18n="cat_tag_resin">ريزين</span>
-        <h4 class="product-name" data-i18n-product="ocean_board">لوحة ريزين أوقيانوسية</h4>
-        <p class="product-desc" data-i18n="ocean_desc">موجة من الألوان المائية المصبوبة في خشب الجوز</p>
-        <div class="product-footer">
-          <span class="product-price">من 45 USD</span>
-          <div class="product-stars">★★★★★</div>
+    <!-- PRODUCT 1: Heart Cutting Board -->
+    <div class="product-card" 
+         data-category="natural kitchen gift decor"
+         data-product-id="heart-board"
+         onclick="openProduct('heart-board')">
+      <div class="product-img-wrap">
+        <img src="heart-board-1.jpg" alt="Heart Olive Wood Board" class="product-photo" loading="lazy"/>
+        <div class="product-badge bestseller">⭐ Bestseller</div>
+        <div class="product-hover-overlay">
+          <span class="view-detail-btn">🔍 عرض التفاصيل</span>
         </div>
       </div>
-    </div>
-
-    <div class="product-card" data-category="resin kitchen" data-name-ar="طبق تقديم ريزين" data-name-en="Resin Serving Tray" data-name-fr="Plateau de Service Résine" data-name-de="Harz-Serviertablett">
-      <div class="product-img resin-gradient-2">
-        <div class="product-emoji">🍽️</div>
-        <div class="product-badge bestseller" data-i18n="badge_best">الأكثر طلباً</div>
-        <button class="quick-order" data-product="resin-tray" data-i18n="quick_order">اطلب الآن</button>
-      </div>
       <div class="product-info">
-        <span class="product-cat" data-i18n="cat_tag_resin">ريزين</span>
-        <h4 class="product-name" data-i18n-product="serving_tray">طبق تقديم ريزين</h4>
-        <p class="product-desc" data-i18n="tray_desc">طبق تقديم فاخر بألوان الغروب المنعكسة في الريزين</p>
-        <div class="product-footer">
-          <span class="product-price">من 60 USD</span>
-          <div class="product-stars">★★★★★</div>
+        <div class="product-meta-row">
+          <span class="product-cat">🌿 Natural Wood</span>
+          <div class="product-stars-row">
+            <span class="stars">★★★★★</span>
+            <span class="review-count">(24)</span>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="product-card" data-category="resin gift decor" data-name-ar="إطار صورة ريزين" data-name-en="Resin Photo Frame" data-name-fr="Cadre Photo Résine" data-name-de="Harz-Bilderrahmen">
-      <div class="product-img resin-gradient-3">
-        <div class="product-emoji">🖼️</div>
-        <button class="quick-order" data-product="resin-frame" data-i18n="quick_order">اطلب الآن</button>
-      </div>
-      <div class="product-info">
-        <span class="product-cat" data-i18n="cat_tag_resin">ريزين</span>
-        <h4 class="product-name" data-i18n-product="photo_frame">إطار صورة ريزين</h4>
-        <p class="product-desc" data-i18n="frame_desc">إطار صور فريد يجمع الخشب مع ريزين ملون مخصص</p>
-        <div class="product-footer">
-          <span class="product-price">من 35 USD</span>
-          <div class="product-stars">★★★★☆</div>
+        <h4 class="product-name">لوح تقطيع شكل قلب — Heart Cutting Board</h4>
+        <p class="product-desc">من غابات الزيتون التونسية، تُولد كل قطعة وحيدة في العالم — خشب حي، خطوط فريدة، روح لا تُنسخ.</p>
+        <div class="product-sizes-preview">
+          <span class="size-tag">25cm — 42€</span>
+          <span class="size-tag">30cm — 49€</span>
         </div>
-      </div>
-    </div>
-
-    <div class="product-card" data-category="resin decor" data-name-ar="ساعة ريزين جدارية" data-name-en="Resin Wall Clock" data-name-fr="Horloge Murale Résine" data-name-de="Harz-Wanduhr">
-      <div class="product-img resin-gradient-4">
-        <div class="product-emoji">🕐</div>
-        <div class="product-badge new" data-i18n="badge_new">جديد</div>
-        <button class="quick-order" data-product="resin-clock" data-i18n="quick_order">اطلب الآن</button>
-      </div>
-      <div class="product-info">
-        <span class="product-cat" data-i18n="cat_tag_resin">ريزين</span>
-        <h4 class="product-name" data-i18n-product="wall_clock">ساعة ريزين جدارية</h4>
-        <p class="product-desc" data-i18n="clock_desc">ساعة جدارية فنية تجمع الوقت مع الجمال</p>
-        <div class="product-footer">
-          <span class="product-price">من 80 USD</span>
-          <div class="product-stars">★★★★★</div>
+        <div class="product-hashtags">
+          <span>#Handmade</span>
+          <span>#OliveWood</span>
+          <span>#UniqueGrain</span>
+          <span>#LuxuryKitchen</span>
+          <span>#Giftable</span>
         </div>
-      </div>
-    </div>
-
-    <!-- Category: Natural -->
-    <div class="category-label full-width" style="grid-column: 1/-1; margin-top: 2rem;">
-      <h3 data-i18n="cat_natural">🌳 خشب طبيعي بدون ريزين</h3>
-      <p data-i18n="cat_natural_sub">جمال الخشب في أنقى صورة — دافئ، طبيعي، خالد</p>
-    </div>
-
-    <div class="product-card" data-category="natural kitchen" data-name-ar="لوح تقطيع خشبي" data-name-en="Wooden Cutting Board" data-name-fr="Planche à Découper" data-name-de="Schneidebrett">
-      <div class="product-img natural-gradient-1">
-        <div class="product-emoji">🔪</div>
-        <div class="product-badge bestseller" data-i18n="badge_best">الأكثر طلباً</div>
-        <button class="quick-order" data-product="cutting-board" data-i18n="quick_order">اطلب الآن</button>
-      </div>
-      <div class="product-info">
-        <span class="product-cat" data-i18n="cat_tag_natural">طبيعي</span>
-        <h4 class="product-name" data-i18n-product="cutting_board">لوح تقطيع خشبي</h4>
-        <p class="product-desc" data-i18n="cutting_desc">لوح تقطيع من خشب الزيتون المعالج — جمال وعملية</p>
         <div class="product-footer">
-          <span class="product-price">من 25 USD</span>
-          <div class="product-stars">★★★★★</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card" data-category="natural gift decor" data-name-ar="لافتة خشبية منقوشة" data-name-en="Engraved Wood Sign" data-name-fr="Panneau Bois Gravé" data-name-de="Graviertes Holzschild">
-      <div class="product-img natural-gradient-2">
-        <div class="product-emoji">🪵</div>
-        <button class="quick-order" data-product="wood-sign" data-i18n="quick_order">اطلب الآن</button>
-      </div>
-      <div class="product-info">
-        <span class="product-cat" data-i18n="cat_tag_natural">طبيعي</span>
-        <h4 class="product-name" data-i18n-product="wood_sign">لافتة خشبية منقوشة</h4>
-        <p class="product-desc" data-i18n="sign_desc">لافتة بنقش مخصص — اسمك، عبارتك، أو رسالتك</p>
-        <div class="product-footer">
-          <span class="product-price">من 20 USD</span>
-          <div class="product-stars">★★★★★</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card" data-category="natural kitchen" data-name-ar="ملعقة خشبية يدوية" data-name-en="Hand-carved Wooden Spoon" data-name-fr="Cuillère Bois Sculptée" data-name-de="Handgeschnitzte Holzlöffel">
-      <div class="product-img natural-gradient-3">
-        <div class="product-emoji">🥄</div>
-        <button class="quick-order" data-product="wood-spoon" data-i18n="quick_order">اطلب الآن</button>
-      </div>
-      <div class="product-info">
-        <span class="product-cat" data-i18n="cat_tag_natural">طبيعي</span>
-        <h4 class="product-name" data-i18n-product="wood_spoon">ملعقة خشبية يدوية</h4>
-        <p class="product-desc" data-i18n="spoon_desc">منحوتة يدوياً من الخشب الصلب — هدية مطبخية مميزة</p>
-        <div class="product-footer">
-          <span class="product-price">من 15 USD</span>
-          <div class="product-stars">★★★★☆</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card" data-category="natural decor gift" data-name-ar="صينية تقديم خشبية" data-name-en="Wooden Serving Board" data-name-fr="Plateau en Bois" data-name-de="Holz-Servierbrett">
-      <div class="product-img natural-gradient-4">
-        <div class="product-emoji">🫙</div>
-        <button class="quick-order" data-product="wood-tray" data-i18n="quick_order">اطلب الآن</button>
-      </div>
-      <div class="product-info">
-        <span class="product-cat" data-i18n="cat_tag_natural">طبيعي</span>
-        <h4 class="product-name" data-i18n-product="wood_tray">صينية تقديم خشبية</h4>
-        <p class="product-desc" data-i18n="wood_tray_desc">صينية من خشب السنديان بمقابض طبيعية</p>
-        <div class="product-footer">
-          <span class="product-price">من 30 USD</span>
-          <div class="product-stars">★★★★★</div>
+          <span class="product-price">من <strong>42€</strong></span>
+          <button class="quick-view-btn" onclick="event.stopPropagation(); openProduct('heart-board')">عرض ← </button>
         </div>
       </div>
     </div>
 
   </div>
-  <div id="no-results" class="no-results hidden" data-i18n="no_results">لا توجد منتجات تطابق بحثك</div>
+  <div id="no-results" class="no-results hidden">لا توجد منتجات تطابق بحثك</div>
 </section>
+
+<!-- ===== PRODUCT MODAL ===== -->
+<div id="product-modal" class="modal-overlay hidden" onclick="closeModalOutside(event)">
+  <div class="modal-container">
+    <button class="modal-close" onclick="closeProduct()">✕</button>
+    <div class="modal-body">
+
+      <!-- Left: Gallery -->
+      <div class="modal-gallery">
+        <div class="gallery-main">
+          <img id="modal-main-img" src="" alt=""/>
+        </div>
+        <div class="gallery-thumbs" id="gallery-thumbs"></div>
+      </div>
+
+      <!-- Right: Details -->
+      <div class="modal-details">
+        <div class="modal-meta">
+          <span class="modal-cat" id="modal-cat"></span>
+          <div class="modal-stars-row">
+            <span id="modal-stars">★★★★★</span>
+            <span id="modal-review-count"></span>
+          </div>
+        </div>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-story" id="modal-story"></p>
+
+        <!-- Size & Price Selector -->
+        <div class="modal-options">
+          <label class="option-label" id="size-label">اختر الحجم:</label>
+          <div class="size-options" id="size-options"></div>
+        </div>
+
+        <!-- Quantity & Total -->
+        <div class="modal-qty-row">
+          <label>الكمية:</label>
+          <div class="qty-ctrl">
+            <button onclick="changeModalQty(-1)">−</button>
+            <span id="modal-qty">1</span>
+            <button onclick="changeModalQty(1)">+</button>
+          </div>
+          <div class="modal-total">
+            <span>المجموع:</span>
+            <strong id="modal-total-price"></strong>
+          </div>
+        </div>
+
+        <!-- Hashtags -->
+        <div class="modal-hashtags" id="modal-hashtags"></div>
+
+        <!-- Add to Cart -->
+        <div class="modal-actions">
+          <button class="btn-add-cart" onclick="addToCart()">🛒 أضف للسلة</button>
+          <button class="btn-order-now" onclick="orderNow()">⚡ اطلب الآن</button>
+        </div>
+
+        <!-- Reviews -->
+        <div class="modal-reviews">
+          <div class="reviews-header">
+            <h3>التقييمات والتعليقات</h3>
+            <button class="add-review-btn" onclick="toggleReviewForm()">+ أضف تقييمك</button>
+          </div>
+
+          <!-- Review Form -->
+          <div id="review-form" class="review-form hidden">
+            <div class="star-picker" id="star-picker">
+              <span onclick="setRating(1)">★</span>
+              <span onclick="setRating(2)">★</span>
+              <span onclick="setRating(3)">★</span>
+              <span onclick="setRating(4)">★</span>
+              <span onclick="setRating(5)">★</span>
+            </div>
+            <input type="text" id="review-name" placeholder="اسمك والدولة (مثل: Sarah, USA)" class="review-input"/>
+            <textarea id="review-text" placeholder="شاركنا تجربتك مع هذا المنتج..." class="review-textarea"></textarea>
+            <button class="submit-review-btn" onclick="submitReview()">نشر التقييم ✓</button>
+          </div>
+
+          <!-- Reviews List -->
+          <div id="reviews-list" class="reviews-list"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CART SIDEBAR ===== -->
+<div id="cart-sidebar" class="cart-sidebar hidden">
+  <div class="cart-header">
+    <h3>🛒 <span id="cart-title">السلة</span></h3>
+    <button onclick="closeCart()">✕</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>المجموع:</span>
+      <strong id="cart-grand-total">0€</strong>
+    </div>
+    <button class="btn-checkout" onclick="checkoutCart()">⚡ إتمام الطلب عبر واتساب</button>
+  </div>
+</div>
+<div id="cart-overlay" class="cart-overlay hidden" onclick="closeCart()"></div>
+
+<!-- Cart Button -->
+<button id="cart-fab" class="cart-fab hidden" onclick="openCart()">
+  🛒 <span id="cart-count">0</span>
+</button>
 
 <!-- ===== ABOUT ===== -->
 <section id="about" class="about-section">
@@ -728,5 +733,6 @@
 </div>
 
 <script src="app.js"></script>
+<script src="products.js"></script>
 </body>
 </html>
