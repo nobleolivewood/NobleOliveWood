@@ -73,10 +73,91 @@ const PRODUCTS = {
         date: '2025-03-28'
       }
     ]
-  }
+  },
 
-  // ──────────────────────────────────────────
-  // ADD NEW PRODUCT HERE — copy this template:
+  // ── PRODUCT 2: Natural Olive Wood Bowl ──
+  'olive-bowl': {
+    id: 'olive-bowl',
+    category: 'natural kitchen decor gift',
+    images: [
+      'bowl-1.jpg',
+      'bowl-2.jpg',
+      'bowl-3.jpg',
+      'bowl-4.jpg',
+      'bowl-5.jpg',
+      'bowl-6.jpg',
+      'bowl-7.jpg',
+      'bowl-8.jpg'
+    ],
+    badge: '🆕 New',
+    cat: '🌿 Natural Olive Wood',
+    rating: 4.8,
+    reviewCount: 18,
+    name: {
+      ar: 'جفنة زيتون طبيعية',
+      en: 'Natural Olive Wood Bowl',
+      fr: 'Bol en Bois d\'Olivier Naturel',
+      de: 'Natürliche Olivenholzschüssel'
+    },
+    story: {
+      ar: 'لم تُصنع — بل وُلدت. كل جفنة تنبثق من جذع زيتون عريق، تحمل ذاكرة قرون من الشمس والريح والأرض التونسية. الحواف الطبيعية غير المنتظمة ليست عيباً — إنها التوقيع الذي لا يُزوَّر. تحفة فنية تعيش على طاولتك وتروي قصة لا تُقرأ في كتاب.',
+      en: 'Not made — but born. Each bowl emerges from the trunk of an ancient olive tree, carrying centuries of Tunisian sun, wind, and earth. The raw, irregular natural edges are not flaws — they are the unforgeable signature of time. A living sculpture that tells a story no book can hold.',
+      fr: 'Pas fabriqué — mais né. Chaque bol émerge du tronc d\'un olivier ancestral, portant des siècles de soleil, de vent et de terre tunisienne. Les bords naturels irréguliers ne sont pas des défauts — ce sont la signature infalsifiable du temps. Une sculpture vivante qui raconte une histoire.',
+      de: 'Nicht hergestellt — sondern geboren. Jede Schüssel entsteht aus dem Stamm eines uralten Olivenbaums und trägt jahrhundertelange tunesische Sonne, Wind und Erde. Die rauen, unregelmäßigen Kanten sind keine Mängel — sie sind die unverfälschliche Signatur der Zeit.'
+    },
+    sizes: [
+      { label: '12 cm', price: 30 },
+      { label: '20 cm', price: 35 },
+      { label: '25 cm', price: 39 },
+      { label: '30 cm', price: 45 }
+    ],
+    hashtags: [
+      '#OrganicWoodenBowl',
+      '#SculpturalCenterpiece',
+      '#ArtisanHomePiece',
+      '#LuxuryOliveWoodDecor',
+      '#Handmade',
+      '#OliveWood',
+      '#UniqueGrain'
+    ],
+    defaultReviews: [
+      {
+        name: 'Clara B.',
+        country: '🇫🇷 France',
+        rating: 5,
+        text: 'Cette pièce est absolument magnifique! Les veines du bois sont hypnotisantes. Je l\'utilise comme centre de table et tout le monde me demande d\'où elle vient. Un vrai chef-d\'œuvre artisanal!',
+        date: '2025-04-10'
+      },
+      {
+        name: 'James T.',
+        country: '🇬🇧 United Kingdom',
+        rating: 5,
+        text: 'Stunning piece! The natural edges give it such a raw, organic beauty. It arrived perfectly packaged and looks even better in person. Worth every penny!',
+        date: '2025-03-22'
+      },
+      {
+        name: 'Lena W.',
+        country: '🇩🇪 Germany',
+        rating: 5,
+        text: 'Absolut beeindruckend! Die natürliche Maserung des Holzes ist einzigartig. Ich habe die 25cm Version bestellt und sie ist perfekt als Obstschale auf meinem Esstisch.',
+        date: '2025-02-18'
+      },
+      {
+        name: 'سارة القحطاني',
+        country: '🇸🇦 السعودية',
+        rating: 5,
+        text: 'قطعة فنية بكل معنى الكلمة! الجفنة وصلت بتغليف رائع وكانت أجمل مما توقعت. أهديتها لوالدتي وأُعجبت بها جداً. شكراً Noble Olivewood!',
+        date: '2025-04-01'
+      },
+      {
+        name: 'Sofia M.',
+        country: '🇮🇹 Italy',
+        rating: 4,
+        text: 'Bellissimo pezzo! Il legno d\'ulivo ha una texture meravigliosa. Ho preso la versione da 30cm e la uso come ciotola decorativa. Qualità eccellente!',
+        date: '2025-03-05'
+      }
+    ]
+  }
   // ──────────────────────────────────────────
   // 'product-id': {
   //   id: 'product-id',
