@@ -157,11 +157,91 @@ const PRODUCTS = {
         date: '2025-03-05'
       }
     ]
+  },
+
+  // ── PRODUCT 3: Noir Mosaic Olive Wood Board ──
+  'mosaic-board': {
+    id: 'mosaic-board',
+    category: 'natural kitchen decor gift',
+    images: [
+      'mosaic-1.jpg',
+      'mosaic-2.jpg',
+      'mosaic-3.jpg',
+      'mosaic-4.jpg',
+      'mosaic-5.jpg',
+      'mosaic-6.jpg'
+    ],
+    badge: '✦ Signature',
+    cat: '🖤 Noir Olive Wood',
+    rating: 5.0,
+    reviewCount: 12,
+    name: {
+      ar: 'لوح موزاييك أسود — Noir Mosaic Board',
+      en: 'Noir Mosaic Olive Wood Board',
+      fr: 'Planche Mosaïque Noir en Bois d\'Olivier',
+      de: 'Noir Mosaik Olivenholzbrett'
+    },
+    story: {
+      ar: 'تأليف من التناقض والإيقاع والحرفية. هذا اللوح مصنوع بالكامل من خشب الزيتون الطبيعي — مجمّع قطعة قطعة بنمط هندسي جريء يجمع بين دفء الخشب الطبيعي وعمق الألوان الداكنة. لا راتنج. لا أسطح اصطناعية. فقط خشب زيتون صلب شُكّل بعناية حرفية استثنائية. قطعة واحدة من نوعها — مصممة للمطابخ الراقية والديكورات التي تقدّر المواد الأصيلة.\n\n• مصنوع يدوياً من خشب الزيتون الصلب\n• تفاصيل بخشب زيتون مصبوغ داكن\n• الحجم: 30 × 30 سم\n• الوزن التقريبي: 2 كغ\n• تشطيب آمن للطعام\n• حرفية لا تتكرر\n• شحن دولي متاح',
+      en: 'An intricate composition of contrast, rhythm, and craftsmanship. Handcrafted entirely from natural olive wood — individually assembled in a striking geometric mosaic pattern combining warm organic grain with carefully dark-stained olive wood pieces. No resin. No artificial surfaces. Only solid olive wood shaped through exceptional artisan work.\n\n• Handmade from solid olive wood\n• Dark-stained olive wood detailing\n• Size: 30 × 30 cm\n• Approx. weight: 2 kg\n• Food-safe finish\n• One-of-a-kind craftsmanship\n• International shipping available',
+      fr: 'Une composition complexe de contraste, de rythme et de savoir-faire. Entièrement fabriqué à la main en bois d\'olivier naturel — assemblé individuellement dans un motif mosaïque géométrique frappant. Pas de résine. Pas de surfaces artificielles.\n\n• Fait main en bois d\'olivier massif\n• Détails en bois d\'olivier teinté foncé\n• Taille: 30 × 30 cm • Poids: ~2 kg\n• Finition alimentaire • Pièce unique\n• Livraison internationale disponible',
+      de: 'Eine komplexe Komposition aus Kontrast, Rhythmus und Handwerkskunst. Vollständig von Hand aus natürlichem Olivenholz gefertigt — einzeln in einem auffälligen geometrischen Mosaikmuster zusammengesetzt. Kein Harz. Keine künstlichen Oberflächen.\n\n• Handgefertigt aus massivem Olivenholz\n• Dunkel gebeizte Olivenholzdetails\n• Größe: 30 × 30 cm • Gewicht: ~2 kg\n• Lebensmittelsichere Oberfläche • Unikat\n• Internationaler Versand verfügbar'
+    },
+    sizes: [
+      { label: '30 × 30 cm — ~2kg', price: 165 }
+    ],
+    hashtags: [
+      '#OliveWood', '#OliveWoodBoard', '#CuttingBoard', '#ServingBoard',
+      '#HandmadeWoodwork', '#Woodworking', '#LuxuryKitchen', '#KitchenDecor',
+      '#ArtisanMade', '#WoodArt', '#WoodDesign', '#ModernKitchen',
+      '#KitchenAccessories', '#HomeDecor', '#LuxuryDecor', '#Craftsmanship',
+      '#NaturalWood', '#WoodenBoard', '#OliveWoodCraft', '#StatementPiece',
+      '#EtsySeller', '#Handcrafted', '#InteriorStyling', '#FineCraftsmanship',
+      '#MinimalLuxury'
+    ],
+    defaultReviews: [
+      {
+        name: 'Thomas H.',
+        country: '🇩🇪 Germany',
+        rating: 5,
+        text: 'This board is an absolute masterpiece. The geometric mosaic pattern is breathtaking and the quality is outstanding. It\'s become the centrepiece of my kitchen. Worth every euro!',
+        date: '2025-04-20'
+      },
+      {
+        name: 'Isabelle D.',
+        country: '🇫🇷 France',
+        rating: 5,
+        text: 'Une pièce d\'exception! Le motif mosaïque est absolument saisissant. Je l\'utilise comme planche de service lors de mes dîners et tous mes invités sont impressionnés. Un vrai chef-d\'œuvre.',
+        date: '2025-03-15'
+      },
+      {
+        name: 'Marco V.',
+        country: '🇮🇹 Italy',
+        rating: 5,
+        text: 'Semplicemente straordinario! La qualità del legno d\'ulivo è eccezionale e il design a mosaico è unico. Perfetto come tagliere e come pezzo decorativo.',
+        date: '2025-02-28'
+      },
+      {
+        name: 'عبدالله المنصور',
+        country: '🇸🇦 السعودية',
+        rating: 5,
+        text: 'قطعة فنية لا مثيل لها! النمط الهندسي مذهل والصنعة استثنائية. أهديتها لصديق في مناسبة خاصة وكانت الهدية الأجمل على الإطلاق.',
+        date: '2025-04-05'
+      },
+      {
+        name: 'Sophie W.',
+        country: '🇬🇧 United Kingdom',
+        rating: 5,
+        text: 'Stunning piece of craftsmanship! The contrast between the natural and dark olive wood is mesmerising. Heavy, solid, and beautifully finished. A true statement piece.',
+        date: '2025-03-30'
+      }
+    ]
   }
+
   // ──────────────────────────────────────────
   // 'product-id': {
   //   id: 'product-id',
-  //   category: 'natural kitchen gift decor',  // choose from: natural resin kitchen gift decor
+  //   category: 'natural kitchen gift decor',
   //   images: ['img1.jpg', 'img2.jpg'],
   //   badge: '🆕 New',
   //   cat: '🌿 Natural Olive Wood',
