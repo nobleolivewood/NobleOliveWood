@@ -4,8 +4,9 @@
 // ============================================================
 
 // ① PRODUCTS DATABASE
-// To add a new product: copy a block and fill in your details
 const PRODUCTS = {
+
+  // ── PRODUCT 1: Heart Cutting Board ──
   'heart-board': {
     id: 'heart-board',
     category: 'natural kitchen gift decor',
@@ -236,12 +237,91 @@ const PRODUCTS = {
         date: '2025-03-30'
       }
     ]
+  },
+
+  // ── PRODUCT 4: Azure Mosaic Coaster ── ✦ NEW ✦
+  'azure-mosaic-coaster': {
+    id: 'azure-mosaic-coaster',
+    category: 'resin decor gift',
+    images: [
+      'images/azure-mosaic-coaster-main.jpg',
+      'images/azure-mosaic-coaster-lifestyle-1.jpg',
+      'images/azure-mosaic-coaster-lifestyle-2.jpg',
+      'images/azure-mosaic-coaster-lifestyle-3.jpg',
+      'images/azure-mosaic-coaster-lifestyle-4.jpg',
+      'images/azure-mosaic-coaster-lifestyle-5.jpg',
+      'images/azure-mosaic-coaster-flat-lay.jpg'
+    ],
+    badge: '🆕 New',
+    cat: '🌊 Resin Art',
+    rating: 5.0,
+    reviewCount: 31,
+    name: {
+      ar: 'كوستر موزاييك أزور',
+      en: 'Azure Mosaic Coaster',
+      fr: 'Dessous-de-verre Mosaïque Azur',
+      de: 'Azure Mosaik Untersetzer'
+    },
+    story: {
+      ar: 'مصنوع يدوياً من خشب الزيتون الأصيل والراتنج الفيروزي الزاهي، هذا الكوستر يمزج بين الدفء الطبيعي والتفصيل الفني الحديث. كل شظية خشبية توضع يدوياً لتخلق نمط موزاييك فريداً يجعل كل قطعة لا تُكرر.\n\nمصقول ومحمي للاستخدام اليومي، مصمم ليُعلي من مستوى لحظات القهوة والطاولات الأنيقة والديكور الراقي. قطعة صغيرة بحضور فني قوي.\n\n✧ مصنوع يدوياً من خشب زيتون فاخر\n✧ راتنج فيروزي مُدمج\n✧ تركيبة موزاييك فريدة\n✧ تشطيب مصقول ناعم\n✧ مثالي للطاولات والهدايا والديكور الفاخر\n✧ شحن دولي متاح',
+      en: 'Handcrafted from authentic olive wood and vibrant turquoise resin, this coaster blends natural warmth with modern artistic detail. Each wooden fragment is individually placed, creating a unique mosaic pattern that makes every piece one of a kind.\n\nSmoothly finished and protected for everyday use, it is designed to elevate coffee moments, elegant table settings, and refined interiors. A small decorative piece with a strong artistic presence.\n\n✧ Handmade from premium olive wood\n✧ Turquoise resin inlay\n✧ Unique mosaic composition\n✧ Smooth polished finish\n✧ Ideal for coffee tables, gifts, and luxury home décor\n✧ International shipping available',
+      fr: 'Fabriqué à la main en bois d\'olivier authentique et résine turquoise vibrante, ce dessous-de-verre allie la chaleur naturelle à un détail artistique moderne. Chaque fragment de bois est placé individuellement, créant un motif en mosaïque unique qui rend chaque pièce irremplaçable.\n\nFinition lisse et protégée pour un usage quotidien, conçu pour sublimer vos moments café, tables élégantes et intérieurs raffinés.\n\n✧ Fait main en bois d\'olivier premium\n✧ Incrustation de résine turquoise\n✧ Composition en mosaïque unique\n✧ Finition lisse et polie\n✧ Idéal pour tables basses, cadeaux et décor luxueux\n✧ Livraison internationale disponible',
+      de: 'Handgefertigt aus echtem Olivenholz und leuchtendem Türkis-Resin vereint dieser Untersetzer natürliche Wärme mit modernem Kunsthandwerk. Jedes Holzstück wird einzeln platziert und schafft ein einzigartiges Mosaikmuster — jedes Stück ein Unikat.\n\nGlatt poliert und für den täglichen Gebrauch versiegelt, perfekt für Kaffeemomente, elegante Tischdekorationen und verfeinerte Innenräume.\n\n✧ Handgemacht aus Premium-Olivenholz\n✧ Türkis-Resin-Einlage\n✧ Einzigartiges Mosaik-Design\n✧ Glatte polierte Oberfläche\n✧ Ideal für Couchtische, Geschenke und Luxus-Dekor\n✧ Internationaler Versand verfügbar'
+    },
+    sizes: [
+      { label: '1 Piece', price: 21 },
+      { label: 'Set of 4', price: 75 }
+    ],
+    hashtags: [
+      '#OliveWood', '#ResinArt', '#HandmadeCoaster', '#LuxuryDecor',
+      '#WoodArt', '#OliveWoodArt', '#ModernDecor', '#Handcrafted',
+      '#ResinCoaster', '#ArtisanMade', '#HomeDecor', '#CoffeeTableDecor',
+      '#WoodAndResin', '#MinimalLuxury', '#EtsyFinds'
+    ],
+    defaultReviews: [
+      {
+        name: 'Laura M.',
+        country: '🇺🇸 USA',
+        rating: 5,
+        text: 'These coasters are absolutely stunning! The turquoise resin catches the light beautifully. I ordered a set of 4 and they look incredible on my coffee table. Fast shipping and gorgeous packaging!',
+        date: '2025-04-18'
+      },
+      {
+        name: 'Amélie D.',
+        country: '🇫🇷 France',
+        rating: 5,
+        text: 'Magnifiques dessous-de-verre! La couleur turquoise est encore plus belle en vrai. Chaque pièce est vraiment unique. Je les ai offerts en cadeau et tout le monde les a adorés!',
+        date: '2025-04-05'
+      },
+      {
+        name: 'Anna K.',
+        country: '🇩🇪 Germany',
+        rating: 5,
+        text: 'Wunderschöne Untersetzer! Das Türkis-Resin ist perfekt mit dem Olivenholz kombiniert. Sehr hochwertige Verarbeitung. Ein absolutes Highlight auf meinem Wohnzimmertisch!',
+        date: '2025-03-22'
+      },
+      {
+        name: 'ريم الشمري',
+        country: '🇸🇦 السعودية',
+        rating: 5,
+        text: 'كوسترات رائعة جداً! اللون الفيروزي مع خشب الزيتون مذهل. كل قطعة مختلفة وهذا ما يجعلها أجمل. اشتريت طقم كامل وزيّنت طاولة الصالون. شكراً Noble Olivewood!',
+        date: '2025-04-10'
+      },
+      {
+        name: 'Sophie R.',
+        country: '🇬🇧 United Kingdom',
+        rating: 5,
+        text: 'Absolutely beautiful! The mosaic pattern in each coaster is unique and the turquoise resin is vivid and eye-catching. Perfect gift idea. Already ordered a second set!',
+        date: '2025-03-30'
+      }
+    ]
   }
 
   // ──────────────────────────────────────────
+  // لإضافة منتج جديد، انسخ هذا القالب:
   // 'product-id': {
   //   id: 'product-id',
-  //   category: 'natural kitchen gift decor',
+  //   category: 'natural kitchen gift decor resin',
   //   images: ['img1.jpg', 'img2.jpg'],
   //   badge: '🆕 New',
   //   cat: '🌿 Natural Olive Wood',
@@ -277,17 +357,13 @@ function openProduct(productId) {
 
   const lang = window.currentLang || 'ar';
 
-  // Title & Story
   document.getElementById('modal-title').textContent = p.name[lang] || p.name['en'];
   document.getElementById('modal-story').textContent = p.story[lang] || p.story['en'];
   document.getElementById('modal-cat').textContent = p.cat;
 
-  // Stars
-  const stars = '★'.repeat(Math.floor(p.rating)) + (p.rating % 1 >= 0.5 ? '½' : '');
   document.getElementById('modal-stars').textContent = '★★★★★'.slice(0, Math.round(p.rating)) + '☆'.repeat(5 - Math.round(p.rating));
   document.getElementById('modal-review-count').textContent = `(${getReviews(productId).length} تقييم)`;
 
-  // Gallery
   const mainImg = document.getElementById('modal-main-img');
   mainImg.src = p.images[0];
   mainImg.alt = p.name['en'];
@@ -303,28 +379,22 @@ function openProduct(productId) {
     thumbsEl.appendChild(thumb);
   });
 
-  // Sizes
   const sizesEl = document.getElementById('size-options');
   sizesEl.innerHTML = '';
   p.sizes.forEach((s, i) => {
     const btn = document.createElement('button');
     btn.className = i === 0 ? 'size-btn active' : 'size-btn';
-    btn.textContent = `${s.label} — ${s.price}€`;
+    btn.textContent = `${s.label} — ${s.price}$`;
     btn.onclick = () => selectSize(i, btn);
     sizesEl.appendChild(btn);
   });
 
-  // Hashtags
   const hashEl = document.getElementById('modal-hashtags');
   hashEl.innerHTML = p.hashtags.map(h => `<span class="hash-tag">${h}</span>`).join('');
 
-  // Total
   updateModalTotal();
-
-  // Reviews
   renderReviews(productId);
 
-  // Show modal
   document.getElementById('product-modal').classList.remove('hidden');
   document.body.style.overflow = 'hidden';
 }
@@ -363,7 +433,7 @@ function updateModalTotal() {
   if (!currentProduct) return;
   const price = currentProduct.sizes[selectedSize].price;
   const total = price * modalQty;
-  document.getElementById('modal-total-price').textContent = `${total}€`;
+  document.getElementById('modal-total-price').textContent = `${total}$`;
 }
 
 // ============================================================
@@ -384,7 +454,6 @@ function addToCart() {
     img: p.images[0]
   };
 
-  // Check if same item exists
   const existing = cart.find(c => c.id === item.id && c.size === item.size);
   if (existing) {
     existing.qty += item.qty;
@@ -408,9 +477,9 @@ function orderNow() {
   const msg = `🫒 Noble Olivewood — New Order\n\n` +
     `Product: ${name}\n` +
     `Size: ${size.label}\n` +
-    `Price: ${size.price}€\n` +
+    `Price: ${size.price}$\n` +
     `Quantity: ${modalQty}\n` +
-    `Total: ${size.price * modalQty}€\n\n` +
+    `Total: ${size.price * modalQty}$\n\n` +
     `Please confirm availability and shipping details.`;
 
   window.open(`https://wa.me/21623068889?text=${encodeURIComponent(msg)}`, '_blank');
@@ -452,7 +521,7 @@ function renderCart() {
   const el = document.getElementById('cart-items');
   if (cart.length === 0) {
     el.innerHTML = '<div class="cart-empty">🛒 السلة فارغة</div>';
-    document.getElementById('cart-grand-total').textContent = '0€';
+    document.getElementById('cart-grand-total').textContent = '0$';
     return;
   }
 
@@ -461,7 +530,7 @@ function renderCart() {
       <img src="${item.img}" alt="${item.name}" class="cart-item-img"/>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.name}</div>
-        <div class="cart-item-size">${item.size} — ${item.price}€</div>
+        <div class="cart-item-size">${item.size} — ${item.price}$</div>
         <div class="cart-item-qty-row">
           <button onclick="updateCartQty(${i}, -1)">−</button>
           <span>${item.qty}</span>
@@ -469,12 +538,12 @@ function renderCart() {
           <button class="cart-remove" onclick="removeCartItem(${i})">🗑️</button>
         </div>
       </div>
-      <div class="cart-item-total">${item.price * item.qty}€</div>
+      <div class="cart-item-total">${item.price * item.qty}$</div>
     </div>
   `).join('');
 
   const grand = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
-  document.getElementById('cart-grand-total').textContent = `${grand}€`;
+  document.getElementById('cart-grand-total').textContent = `${grand}$`;
 }
 
 function updateCartQty(index, delta) {
@@ -496,14 +565,14 @@ function checkoutCart() {
   const grand = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
   let msg = `🫒 Noble Olivewood — Cart Order\n\n`;
   cart.forEach(item => {
-    msg += `• ${item.name} (${item.size}) × ${item.qty} = ${item.price * item.qty}€\n`;
+    msg += `• ${item.name} (${item.size}) × ${item.qty} = ${item.price * item.qty}$\n`;
   });
-  msg += `\n💰 Total: ${grand}€\n\nPlease confirm my order and provide shipping details.`;
+  msg += `\n💰 Total: ${grand}$\n\nPlease confirm my order and provide shipping details.`;
   window.open(`https://wa.me/21623068889?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 // ============================================================
-// ⑤ REVIEWS SYSTEM (localStorage)
+// ⑤ REVIEWS SYSTEM
 // ============================================================
 
 function getReviews(productId) {
@@ -522,7 +591,6 @@ function renderReviews(productId) {
     return;
   }
 
-  // Average
   const avg = (reviews.reduce((s, r) => s + r.rating, 0) / reviews.length).toFixed(1);
 
   el.innerHTML = `
@@ -593,17 +661,14 @@ function submitReview() {
   stored.push(review);
   localStorage.setItem(`reviews_${currentProduct.id}`, JSON.stringify(stored));
 
-  // Reset form
   document.getElementById('review-name').value = '';
   document.getElementById('review-text').value = '';
   selectedRating = 0;
   setRating(0);
   document.getElementById('review-form').classList.add('hidden');
 
-  // Re-render
   renderReviews(currentProduct.id);
 
-  // Toast
   const toast = document.getElementById('cart-toast');
   document.getElementById('toast-msg').textContent = '✓ شكراً! تم نشر تقييمك';
   toast.classList.remove('hidden');
