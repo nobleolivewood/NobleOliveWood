@@ -763,6 +763,20 @@ body {
   grid-column: 1/-1;
 }
 
+.sizes-scroll {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200,169,110,0.3) transparent;
+}
+
+.sizes-scroll::-webkit-scrollbar { height: 3px; }
+.sizes-scroll::-webkit-scrollbar-thumb { background: rgba(200,169,110,0.4); border-radius: 2px; }
+.sizes-scroll .size-tag { flex-shrink: 0; }
+
 /* ===== ABOUT ===== */
 .about-section {
   background: var(--wood-dark);
