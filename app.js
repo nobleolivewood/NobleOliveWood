@@ -737,12 +737,36 @@ function applyLanguage(lang) {
     if (t[key] !== undefined) el.placeholder = t[key];
   });
 
-  // Update product names dynamically
-  document.querySelectorAll('.product-card').forEach(card => {
-    const nameKey = `data-name-${lang}`;
-    const name = card.getAttribute(nameKey);
-    const nameEl = card.querySelector('.product-name');
-    if (name && nameEl) nameEl.textContent = name;
+  // ── PRODUCT CARDS TRANSLATION ──
+  // Translate every product name on the page
+  document.querySelectorAll('.product-name').forEach(el => {
+    const val = el.getAttribute('data-name-' + lang)
+              || el.getAttribute('data-name-en');
+    if (val) el.textContent = val;
+  });
+
+  // Translate every product description on the page
+  document.querySelectorAll('.product-desc').forEach(el => {
+    const val = el.getAttribute('data-desc-' + lang)
+              || el.getAttribute('data-desc-en');
+    if (val) el.textContent = val;
+  });
+
+  // Translate "from" text in price
+  const fromText = { ar: 'من', en: 'From', fr: 'À partir de', de: 'Ab' };
+  document.querySelectorAll('.product-footer .product-price').forEach(el => {
+    const strong = el.querySelector('strong');
+    if (strong) {
+      const price = strong.textContent;
+      el.innerHTML = (fromText[lang] || 'من') + ' <strong>' + price + '</strong>';
+    }
+  });
+
+  // Translate view button
+  const viewText = { ar: 'عرض ←', en: 'View →', fr: 'Voir →', de: 'Ansehen →' };
+  document.querySelectorAll('.quick-view-btn').forEach(el => {
+    if (!el.getAttribute('onclick').includes('event')) return;
+    el.textContent = viewText[lang] || 'عرض ←';
   });
 
   // Active lang button
