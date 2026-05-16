@@ -476,6 +476,84 @@ const PRODUCTS = {
         date: '2025-03-18'
       }
     ]
+  },
+
+  // ── PRODUCT 7: Rustic Olive Bread Board ──
+  'bread-board': {
+    id: 'bread-board',
+    category: 'natural kitchen gift decor',
+    images: [
+      'bread-board-1.jpg',
+      'bread-board-2.jpg',
+      'bread-board-3.jpg',
+      'bread-board-4.jpg',
+      'bread-board-5.jpg',
+      'bread-board-6.jpg'
+    ],
+    badge: '🍞 New',
+    cat: '🌿 Natural Olive Wood',
+    rating: 4.9,
+    reviewCount: 22,
+    name: {
+      ar: 'لوح خبز زيتون ريفي — Rustic Bread Board',
+      en: 'Rustic Olive Bread Board',
+      fr: 'Planche à Pain Rustique en Bois d\'Olivier',
+      de: 'Rustikales Olivenholz Brotbrett'
+    },
+    story: {
+      ar: 'مصنوع للمتع البسيطة في المطبخ 🍞✨\n\nمصنوع يدوياً من خشب الزيتون الأصيل، هذا اللوح مصمم لدمج الوظيفية مع الجمال الطبيعي الخالد. الجزء العلوي المزلق القابل للإزالة يساعد على تجميع الفتات بشكل أنيق، مما يجعل كل لحظة تقديم أنظف وأكثر أناقة.\n\nقطعة عملية وجميلة لمحبي الخبز، موائد الإفطار، والديكور الريفي الراقي.\n\n✦ خشب زيتون طبيعي 100% ✦ غطاء علوي مزلق قابل للإزالة ✦ يحتجز الفتات بأناقة ✦ تشطيب آمن للطعام ✦ مثالي للإفطار والتقديم',
+      en: 'Crafted for the simple pleasures of the kitchen 🍞✨\n\nHandmade from authentic olive wood, this bread cutting board is designed to combine functionality with timeless natural beauty. The removable slatted top helps collect crumbs neatly, making every serving moment cleaner and more elegant.\n\nA practical and beautiful piece for bread lovers, breakfast tables, and rustic kitchen décor.\n\n✦ 100% natural olive wood ✦ Removable slatted crumb-catching top ✦ Keeps your table clean & elegant ✦ Food-safe finish ✦ Perfect for breakfast & serving',
+      fr: 'Conçu pour les plaisirs simples de la cuisine 🍞✨\n\nFabriqué à la main en bois d\'olivier authentique, cette planche à pain combine fonctionnalité et beauté naturelle intemporelle. Le dessus à lattes amovible collecte les miettes proprement, rendant chaque moment de service plus élégant.\n\nUne pièce pratique et belle pour les amateurs de pain, les tables de petit-déjeuner et la décoration de cuisine rustique.\n\n✦ Bois d\'olivier 100% naturel ✦ Dessus à lattes amovible ✦ Retient les miettes élégamment ✦ Finition alimentaire ✦ Parfait pour le petit-déjeuner',
+      de: 'Gefertigt für die einfachen Freuden der Küche 🍞✨\n\nHandgefertigt aus echtem Olivenholz verbindet dieses Brotschneidebrett Funktionalität mit zeitloser natürlicher Schönheit. Der abnehmbare Lamellen-Aufsatz fängt Krümel ordentlich auf und macht jeden Serviermoment eleganter.\n\nEin praktisches und schönes Stück für Brotliebhaber, Frühstückstische und rustikales Küchendékor.\n\n✦ 100% natürliches Olivenholz ✦ Abnehmbarer Krümmel-Lamellen-Aufsatz ✦ Hält Ihren Tisch sauber ✦ Lebensmittelsichere Oberfläche ✦ Perfekt zum Frühstück'
+    },
+    sizes: [
+      { label: 'Standard', price: 49 }
+    ],
+    hashtags: [
+      '#olivewood', '#breadboard', '#cuttingboard', '#olivewoodcraft',
+      '#kitchendecor', '#handmadehome', '#woodart', '#artisanmade',
+      '#naturalwood', '#kitchenessentials', '#breadlover', '#rustickitchen',
+      '#homedecor', '#madebyhand', '#woodworking', '#custommade',
+      '#giftideas', '#aesthetickitchen',
+      '#خشب_الزيتون', '#لوح_خبز', '#صناعة_يدوية', '#مطبخ_فاخر'
+    ],
+    defaultReviews: [
+      {
+        name: 'Laura M.',
+        country: '🇬🇧 United Kingdom',
+        rating: 5,
+        text: 'This bread board is absolutely gorgeous! The slatted top is so clever for catching crumbs and the olive wood grain is beautiful. It looks stunning on my breakfast table every morning. Highly recommend!',
+        date: '2025-04-28'
+      },
+      {
+        name: 'Sophie B.',
+        country: '🇫🇷 France',
+        rating: 5,
+        text: 'Magnifique planche à pain! Le dessus à lattes est très pratique pour les miettes et le bois d\'olivier est absolument splendide. Je l\'utilise tous les matins et elle embellit ma table de petit-déjeuner.',
+        date: '2025-03-22'
+      },
+      {
+        name: 'Lena K.',
+        country: '🇩🇪 Germany',
+        rating: 5,
+        text: 'Wunderschönes Brotbrett! Das abnehmbare Latten-Oberteil ist sehr praktisch für Krümel und das Olivenholz ist einfach traumhaft. Perfektes Geschenk für Brotliebhaber!',
+        date: '2025-02-14'
+      },
+      {
+        name: 'هند الغامدي',
+        country: '🇸🇦 السعودية',
+        rating: 5,
+        text: 'لوح خبز رائع! الجزء العلوي المزلق فكرة ذكية جداً لتجميع الفتات والخشب جميل ودافئ. يزيّن طاولة الإفطار ويجعل كل صباح أجمل. أنصح به بشدة!',
+        date: '2025-04-10'
+      },
+      {
+        name: 'Marco R.',
+        country: '🇮🇹 Italy',
+        rating: 5,
+        text: 'Tagliere del pane bellissimo! Il piano a listelli è geniale per raccogliere le briciole e il legno d\'ulivo è meraviglioso. Lo uso ogni mattina e la mia colazione è diventata un momento speciale!',
+        date: '2025-03-05'
+      }
+    ]
   }
 
   // ──────────────────────────────────────────
